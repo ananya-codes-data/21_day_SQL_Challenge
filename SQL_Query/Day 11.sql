@@ -20,7 +20,11 @@ SELECT DISTINCT
     event,
     COUNT(*) AS occurrence_count
 FROM services_weekly
-WHERE event IS NOT NULL
+WHERE 
+    event IS NOT NULL
 	AND event != 'none'
-GROUP BY service, event
-ORDER BY occurrence_count DESC;
+GROUP BY 
+    service, 
+    event
+ORDER BY 
+    occurrence_count DESC;

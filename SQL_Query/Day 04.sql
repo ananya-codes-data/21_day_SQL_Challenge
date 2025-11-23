@@ -13,7 +13,8 @@ OFFSET 10;
 -- 3. Get the 10 most recent patient admissions based on arrival_date
 SELECT *
 FROM patients
-ORDER BY arrival_date DESC
+ORDER BY 
+    arrival_date DESC
 LIMIT 10;
 
 # Challenge:
@@ -25,6 +26,7 @@ SELECT
     service,
     satisfaction
 FROM patients
-ORDER BY satisfaction DESC
+ORDER BY 
+    satisfaction DESC
 LIMIT 5
 OFFSET 2;

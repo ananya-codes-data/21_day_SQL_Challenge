@@ -4,21 +4,24 @@ SELECT
 	service,
 	COUNT(*) AS total_patients
 FROM patients
-GROUP BY service;
+GROUP BY 
+    service;
     
 -- 2. Calculate the average age of patients grouped by service
 SELECT
 	service,
     ROUND(AVG(age),2) AS average_age
 FROM patients
-GROUP BY service;
+GROUP BY 
+    service;
 
 -- 3. Find the total number of staff members per role
 SELECT
 	role,
     COUNT(staff_id) AS total_staff_members
 FROM staff
-GROUP BY role;
+GROUP BY 
+    role;
 
 #Challenge:
 /* For each hospital service, calculate the total number of patients admitted, total patients refused, 
@@ -29,5 +32,7 @@ SELECT
     SUM(patients_refused) AS total_patients_refused,
     ROUND((SUM(patients_admitted) / SUM(patients_request)) * 100, 2) AS admission_rate
 FROM services_weekly
-GROUP BY service
-ORDER BY admission_rate DESC;
+GROUP BY 
+    service
+ORDER BY 
+    admission_rate DESC;

@@ -48,5 +48,7 @@ SELECT
         ELSE 'Needs Improvement'
 	END AS performance_category
 FROM services_weekly
-GROUP BY service
-ORDER BY avg_satisfaction DESC;
+GROUP BY 
+    service
+ORDER BY 
+    avg_satisfaction DESC;

@@ -30,4 +30,5 @@ SELECT
 	END AS age_category,
     LENGTH(name) AS name_length
 FROM patients
-WHERE LENGTH(name) > 10;
+WHERE 
+    LENGTH(name) > 10;

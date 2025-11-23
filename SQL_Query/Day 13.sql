@@ -6,13 +6,13 @@ SELECT
     s.staff_name
 FROM patients AS p
 INNER JOIN staff AS s
-ON p.service = s.service;
+    ON p.service = s.service;
 
 -- 2. Join services_weekly with staff to show weekly service data with staff information
 SELECT *
 FROM services_weekly AS sw
 INNER JOIN staff AS s
-ON sw.service = s.service;
+    ON sw.service = s.service;
 
 -- 3. Create a report showing patient information along with staff assigned to their service
 SELECT
@@ -21,7 +21,7 @@ SELECT
     s.role
 FROM patients AS p
 INNER JOIN staff AS s
-ON p.service = s.service;
+    ON p.service = s.service;
 
 #Challenge:
 /* Create a comprehensive report showing patient_id, patient name, age, service,
@@ -36,13 +36,14 @@ SELECT
     COUNT(s.staff_id) AS no_of_staff
 FROM patients AS p
 INNER JOIN staff AS s
-ON p.service = s.service
+    ON p.service = s.service
 GROUP BY
 	p.patient_id,
     p.name,
     p.age,
     p.service
-HAVING COUNT(s.staff_id) > 5
+HAVING 
+    COUNT(s.staff_id) > 5
 ORDER BY 
 	no_of_staff DESC,
     patient_name ASC;

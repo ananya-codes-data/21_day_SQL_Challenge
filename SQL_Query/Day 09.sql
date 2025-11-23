@@ -24,6 +24,9 @@ SELECT
 	COUNT(*),
     ROUND(AVG(DATEDIFF(departure_date, arrival_date)),2) AS average_stay
 FROM patients
-GROUP BY service
-HAVING average_stay > 7
-ORDER BY average_stay DESC;
+GROUP BY 
+	service
+HAVING 
+	average_stay > 7
+ORDER BY 
+	average_stay DESC;
