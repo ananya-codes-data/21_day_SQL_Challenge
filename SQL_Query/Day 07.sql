@@ -41,4 +41,5 @@ GROUP BY
     service
 HAVING 
     (total_patients_refused > 100) 
-    AND (avg_patient_satisfaction < 80);
+    AND 
+    (avg_patient_satisfaction < 80);

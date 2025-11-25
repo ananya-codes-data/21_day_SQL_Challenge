@@ -27,4 +27,5 @@ SELECT
 FROM patients
 WHERE 
     service = 'Surgery' 
-    AND satisfaction < 70;
+    AND 
+    satisfaction < 70;

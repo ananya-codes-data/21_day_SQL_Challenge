@@ -22,7 +22,8 @@ SELECT DISTINCT
 FROM services_weekly
 WHERE 
     event IS NOT NULL
-	AND event != 'none'
+	AND 
+    event != 'none'
 GROUP BY 
     service, 
     event
