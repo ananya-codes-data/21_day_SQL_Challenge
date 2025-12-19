@@ -1,19 +1,22 @@
 # Day-3:
 -- 1. List all patients sorted by age in descending order
-SELECT *
+SELECT 
+    *
 FROM patients
 ORDER BY 
     age DESC;
 
 -- 2. Show all services_weekly data sorted by week number ascending and patients_request descending
-SELECT *
+SELECT 
+    *
 FROM services_weekly
 ORDER BY 
     week ASC, 
     patients_request DESC;
 
 -- 3. Display staff members sorted alphabetically by their names
-SELECT *
+SELECT 
+    *
 FROM staff
 ORDER BY 
     staff_name ASC;

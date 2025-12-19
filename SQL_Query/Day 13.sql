@@ -9,7 +9,8 @@ INNER JOIN staff AS s
     ON p.service = s.service;
 
 -- 2. Join services_weekly with staff to show weekly service data with staff information
-SELECT *
+SELECT 
+    *
 FROM services_weekly AS sw
 INNER JOIN staff AS s
     ON sw.service = s.service;
