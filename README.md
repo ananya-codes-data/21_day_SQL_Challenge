@@ -17,12 +17,9 @@ Contains:
 <br>
 
 - All the datasets in the csv files.
-<br>
 
 - A .sql file for the database creation.
-<br>
 
 - A .dump file that I used for postgres.
-<br>
 
 - A .sql file that has all the questions along with the queries.
